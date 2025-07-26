@@ -38,19 +38,19 @@ const mockProducts = [
 ];
 
 const VendorDashboard = () => {
-  const [selectedProduct, setSelectedProduct] = useState<typeof mockProducts[0] | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [showJoinModal, setShowJoinModal] = useState(false);
 
-  const handleJoinOrder = (product: typeof mockProducts[0]) => {
+  const handleJoinOrder = (product) => {
     setSelectedProduct(product);
     setShowJoinModal(true);
   };
 
-  const getProgressPercentage = (current: number, target: number) => {
+  const getProgressPercentage = (current, target) => {
     return (current / target) * 100;
   };
 
-  const getStatusBadge = (current: number, target: number) => {
+  const getStatusBadge = (current, target) => {
     if (current >= target) {
       return <Badge className="bg-green-500">Ready to Order</Badge>;
     } else if (current >= target * 0.7) {
