@@ -30,7 +30,7 @@ const mockOrders = [
 ];
 
 export const OrderStatus = () => {
-  const getStatusBadge = (status: string) => {
+  const getStatusBadge = (status) => {
     switch (status) {
       case "waiting":
         return <Badge variant="outline">Waiting</Badge>;
@@ -43,7 +43,7 @@ export const OrderStatus = () => {
     }
   };
 
-  const getStatusDescription = (status: string) => {
+  const getStatusDescription = (status) => {
     switch (status) {
       case "waiting":
         return "Waiting for group to fill";
