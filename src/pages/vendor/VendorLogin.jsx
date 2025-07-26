@@ -12,7 +12,7 @@ const VendorLogin = () => {
   });
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Connect to backend authentication
     console.log("Vendor login:", formData);
@@ -20,7 +20,7 @@ const VendorLogin = () => {
     navigate("/vendor/dashboard");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value

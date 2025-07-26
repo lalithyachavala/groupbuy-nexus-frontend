@@ -12,7 +12,7 @@ const AdminLogin = () => {
   });
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Connect to backend authentication
     console.log("Admin login:", formData);
@@ -20,7 +20,7 @@ const AdminLogin = () => {
     navigate("/admin/products");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value

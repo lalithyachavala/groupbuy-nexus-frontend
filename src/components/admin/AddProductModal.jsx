@@ -12,13 +12,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-interface AddProductModalProps {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  onSubmit: (productData: any) => void;
-}
-
-export const AddProductModal = ({ open, onOpenChange, onSubmit }: AddProductModalProps) => {
+export const AddProductModal = ({ open, onOpenChange, onSubmit }) => {
   const [formData, setFormData] = useState({
     name: "",
     price: "",
@@ -27,7 +21,7 @@ export const AddProductModal = ({ open, onOpenChange, onSubmit }: AddProductModa
     groupSize: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit({
       ...formData,
@@ -44,7 +38,7 @@ export const AddProductModal = ({ open, onOpenChange, onSubmit }: AddProductModa
     });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value

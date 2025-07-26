@@ -9,22 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  groupSize: number;
-  isActive: boolean;
-}
-
-interface ProductListProps {
-  products: Product[];
-  onEdit: (id: number) => void;
-  onDelete: (id: number) => void;
-}
-
-export const ProductList = ({ products, onEdit, onDelete }: ProductListProps) => {
+export const ProductList = ({ products, onEdit, onDelete }) => {
   return (
     <div className="space-y-4">
       {products.length === 0 ? (

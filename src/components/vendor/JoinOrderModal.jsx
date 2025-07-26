@@ -11,24 +11,10 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  currentJoined: number;
-  targetGroup: number;
-}
-
-interface JoinOrderModalProps {
-  product: Product;
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-}
-
-export const JoinOrderModal = ({ product, open, onOpenChange }: JoinOrderModalProps) => {
+export const JoinOrderModal = ({ product, open, onOpenChange }) => {
   const [quantity, setQuantity] = useState(1);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Connect to backend
     console.log("Joining order:", { productId: product.id, quantity });

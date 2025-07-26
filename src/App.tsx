@@ -5,12 +5,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import VendorSignup from "./pages/vendor/VendorSignup";
-import VendorLogin from "./pages/vendor/VendorLogin";
-import VendorDashboard from "./pages/vendor/VendorDashboard";
-import VendorProfile from "./pages/vendor/VendorProfile";
-import AdminLogin from "./pages/admin/AdminLogin";
-import ProductManagement from "./pages/admin/ProductManagement";
+import VendorSignup from "./pages/vendor/VendorSignup.jsx";
+import VendorLogin from "./pages/vendor/VendorLogin.jsx";
+import VendorDashboard from "./pages/vendor/VendorDashboard.jsx";
+import VendorProfile from "./pages/vendor/VendorProfile.jsx";
+import AdminLogin from "./pages/admin/AdminLogin.jsx";
+import ProductManagement from "./pages/admin/ProductManagement.jsx";
 
 const queryClient = new QueryClient();
 
