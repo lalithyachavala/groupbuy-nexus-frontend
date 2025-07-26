@@ -14,14 +14,14 @@ const VendorProfile = () => {
     phone: "+880 123 456 7890"
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Connect to backend
     console.log("Updating profile:", profileData);
     setIsEditing(false);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setProfileData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
