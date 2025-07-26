@@ -36,7 +36,7 @@ const ProductManagement = () => {
   const [products, setProducts] = useState(mockProducts);
   const [showAddModal, setShowAddModal] = useState(false);
 
-  const handleAddProduct = (productData: any) => {
+  const handleAddProduct = (productData) => {
     // TODO: Connect to backend
     const newProduct = {
       id: products.length + 1,
@@ -47,12 +47,12 @@ const ProductManagement = () => {
     console.log("Adding product:", newProduct);
   };
 
-  const handleEditProduct = (id: number) => {
+  const handleEditProduct = (id) => {
     // TODO: Implement edit functionality
     console.log("Editing product:", id);
   };
 
-  const handleDeleteProduct = (id: number) => {
+  const handleDeleteProduct = (id) => {
     // TODO: Connect to backend
     setProducts(prev => prev.filter(p => p.id !== id));
     console.log("Deleting product:", id);
